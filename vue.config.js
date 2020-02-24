@@ -28,19 +28,17 @@ module.exports = {
         return options;
       });
   },
-  css: {
-    modules: false, // 启用 CSS modules
-    // extract: isEnvProd() ? true : false, // 是否使用css分离插件
-    sourceMap: false, // 开启 CSS source maps?
-    loaderOptions: {
-      sass: {
-        data: '@import "@/assets/css/base.scss";'
-      }
-    } // css预设器配置项
-  },
+  // css: {
+  //   // extract: isEnvProd() ? true : false, // 是否使用css分离插件
+  //   sourceMap: false, // 开启 CSS source maps?
+  //   loaderOptions: {
+  //     sass: {
+  //       data: '@import "@/assets/css/base.scss";'
+  //     }
+  //   } // css预设器配置项
+  // },
   devServer: {
-    host: "localhost",
-    port: 8080, // 端口
-    proxy: {}
+    host: "0.0.0.0",
+    port: 8080 // 端口
   }
 };

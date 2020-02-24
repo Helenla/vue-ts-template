@@ -4,7 +4,7 @@ module.exports = {
     require("autoprefixer")({}),
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     require("postcss-px2rem")({
-      remUnit: 75
+      remUnit: 37.5
     })
   ]
 };
