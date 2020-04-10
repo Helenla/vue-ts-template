@@ -1,0 +1,16 @@
+// 定位居中 上下距离控制
+@mixin position-x($top: auto, $bottom: auto, $center: 'false'){
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  @if $center == 'true' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+// 导入assets png图片
+@mixin srcImg($img: '') {
+  // background: url('../assets/images/'+$img+'.png') no-repeat;
+  background: url('../assets/img/'+$img+'.png') no-repeat;
+  background-size: 100% 100%;
+}
