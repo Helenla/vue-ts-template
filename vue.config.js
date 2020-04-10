@@ -1,4 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+const webpack = require("webpack");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const merge = require("webpack-merge");
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const tsImportPluginFactory = require("ts-import-plugin");
@@ -28,15 +30,23 @@ module.exports = {
         return options;
       });
   },
-  // css: {
-  //   // extract: isEnvProd() ? true : false, // 是否使用css分离插件
-  //   sourceMap: false, // 开启 CSS source maps?
-  //   loaderOptions: {
-  //     sass: {
-  //       data: '@import "@/assets/css/base.scss";'
-  //     }
-  //   } // css预设器配置项
-  // },
+  configureWebpack: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "windows.jQuery": "jquery"
+      })
+    ]
+  },
+  css: {
+    // css预设器配置项
+    loaderOptions: {
+      scss: {
+        prependData: '@import "~@/scss/base.scss";'
+      }
+    }
+  },
   devServer: {
     host: "0.0.0.0",
     port: 8080 // 端口
