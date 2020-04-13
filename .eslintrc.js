@@ -15,6 +15,8 @@ module.exports = {
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off"
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "@typescript-eslint/no-var-requires": 0, // require导入不会报错
+    "@typescript-eslint/no-explicit-any": 0 // any的使用
   }
 };

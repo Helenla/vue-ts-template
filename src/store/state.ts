@@ -3,8 +3,7 @@ export enum Mode {
   finish
 }
 
-// eslint-disable-next-line @typescript-eslint/interface-name-prefix
-export interface ITodoItem {
+export interface TodoItem {
   id: string;
   name: string;
   isDone: boolean;
@@ -14,7 +13,7 @@ export interface ITodoItem {
 }
 
 export interface State {
-  todoList: Array<ITodoItem>;
+  todoList: Array<TodoItem>;
 }
 
 export const state: State = {

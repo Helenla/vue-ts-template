@@ -1,8 +1,8 @@
 // import { State } from "../store/state";
-// import { ITodoItem } from "./state";
+// import { TodoItem } from "./state";
 
 export const getters = {
-  // getCurrentTodoList(state: State): ITodoItem[] {
+  // getCurrentTodoList(state: State): TodoItem[] {
   //   return state.todoList;
   // }
 };

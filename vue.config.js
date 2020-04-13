@@ -1,8 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const webpack = require("webpack");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const merge = require("webpack-merge");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const tsImportPluginFactory = require("ts-import-plugin");
 
 module.exports = {
