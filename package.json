@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.149",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lib-flexible": "^0.3.2",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
