@@ -29,6 +29,7 @@ export default class Home extends Vue {
   }, 500);
   clickBtn() {
     this.aaa();
+    console.log("测试一下");
   }
 }
 </script>
