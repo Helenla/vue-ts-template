@@ -1,5 +1,7 @@
 <template>
-  <section class="Head">{{ time }}</section>
+  <section class="Head">
+    {{ time }}
+  </section>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
@@ -11,7 +13,7 @@ export default class Head extends Vue {
 </script>
 <style lang="scss" scoped>
 .Head {
-  width: 100%;
+  width: 200px;
   height: 100px;
   line-height: 100px;
 }

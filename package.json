@@ -4,13 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build:dev": "vue-cli-service build --mode dev",
+    "build:pre": "vue-cli-service build --mode pre",
+    "build:prod": "vue-cli-service build --mode prod",
+    "analyz": "vue-cli-service build --mode analyz"
   },
   "dependencies": {
     "@types/lodash": "^4.14.149",
     "jquery": "^3.4.1",
-    "lib-flexible": "^0.3.2",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "register-service-worker": "^1.6.2",
@@ -39,14 +41,16 @@
     "eslint-plugin-vue": "^6.1.2",
     "lint-staged": "^9.5.0",
     "node-sass": "^4.12.0",
-    "postcss-px2rem": "^0.3.0",
+    "postcss-px-to-viewport": "^1.1.1",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
+    "terser-webpack-plugin": "^5.1.2",
     "ts-import-plugin": "^1.6.3",
     "typescript": "~3.7.5",
     "vue-template-compiler": "^2.6.11",
     "vuex-persist": "^2.2.0",
-    "webpack": "^4.42.1"
+    "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^4.4.2"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"

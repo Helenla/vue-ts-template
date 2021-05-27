@@ -1,24 +1,21 @@
 # vue-ts-template
 
-## Project setup
+## 下载依赖
 ```
-npm install
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+yarn serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+yarn build
 ```
 
-### Lints and fixes files
+### 分析打包体积
 ```
-npm run lint
+yarn analyz
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -8,9 +8,33 @@
     transform: translateX(-50%);
   }
 }
+
 // 导入assets png图片
 @mixin srcImg($img: '') {
-  // background: url('../assets/images/'+$img+'.png') no-repeat;
   background: url('../assets/img/'+$img+'.png') no-repeat;
   background-size: 100% 100%;
+}
+
+// 页面滚动
+@mixin scrollable($direct: 'y') {
+  overflow-#{$direct}: scroll;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// 文字超出限制
+@mixin line($line: 1) {
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
+
+// 如果当前正在处于页面滚动回到顶部阶段，将整个页面所有事件屏蔽
+@mixin forbid-all {
+  pointer-events: none;
 }

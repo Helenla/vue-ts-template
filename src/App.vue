@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view class="pages" />
   </div>
 </template>
 <script lang="ts">
@@ -8,3 +8,10 @@ import { Component, Vue } from "vue-property-decorator";
 @Component({})
 export default class Home extends Vue {}
 </script>
+<style lang="scss">
+@import "./scss/app.scss";
+
+#app {
+  font-size: 12px;
+}
+</style>

@@ -1,5 +1,6 @@
 <template>
-  <section class="home">
+  <section class="page page-content">
+    这里是首页
     <Head :time="now"></Head>
     <button @click="clickBtn">222</button>
   </section>
@@ -19,17 +20,21 @@ import _ from "lodash";
   }
 })
 export default class Home extends Vue {
-  private now!: Date | string;
+  now!: Date | string;
+
   created() {
-    this.now = moment(new Date()).format("YYYY-MM-DD, HH:MM");
-    console.log(_);
+    this.now = moment(new Date()).format("YYYY-MM-DD, HH:mm");
   }
-  aaa = _.debounce(function() {
-    console.log(1);
+
+  aaa = _.debounce(() => {
+    this.now = moment(new Date()).format("YYYY-MM-DD, HH:mm");
+    console.log(this.now);
   }, 500);
+
   clickBtn() {
     this.aaa();
-    console.log("测试一下");
+    Toast("测试一下");
   }
 }
 </script>
+<style lang="scss" scoped></style>
